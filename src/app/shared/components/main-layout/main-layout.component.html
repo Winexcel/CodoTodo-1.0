@@ -1,0 +1,147 @@
+<nav class="codo-navbar animated faster" [ngClass]="{
+  'd-none': navbar.isFirstOpen,
+  slideInLeft: navbar.display,
+  slideOutLeft: !navbar.display
+}">
+  <div class="navbar-content">
+    <!-- Brand-->
+    <div class="sidenav-header align-items-center logo">
+      <a class="logo-link" href="/">
+        <img src="../assets/img/logo.png" class="logo-img" alt="...">
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <!-- Heading -->
+      <h6 class="navbar-heading p-0 text-muted">
+        <span class="docs-normal">Документация</span>
+      </h6>
+      <!--Navigation-->
+      <ul class="navbar-nav mb-md-3">
+        <li class="nav-item">
+          <a class="nav-link"
+             href="#"
+             target="_blank">
+            <span class="nav-link-text">Как создать задание</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+             target="_blank">
+            <span class="nav-link-text">Поделиться событием</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+             target="_blank">
+            <span class="nav-link-text">Назначение даты</span>
+          </a>
+        </li>
+        <li class="nav-item nav-item__bg nav-item__go-pro">
+          <a class="nav-link nav-link-bg" href="#"
+             target="_blank">
+            <i class="fa fa-arrow-right"></i>
+            <span class="nav-link-text">CodoTodo PRO</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main content -->
+<div class="main-content">
+  <!-- Topnav -->
+  <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar links -->
+        <div class="sidenav-toggler-inner codo-sidenav" (click)="openNavbar($event)">
+          <i class="sidenav-toggler-line"></i>
+          <i class="sidenav-toggler-line"></i>
+          <i class="sidenav-toggler-line"></i>
+        </div>
+        <!-- PROFILE LINK -->
+        <div class="col-auto ml-auto">
+          <div class="user" (click)="openMenu($event)">
+            <div class="user-avatar avatar">
+              <img src="../../../../assets/img/avatar.jpg" class="avatar-img" alt="">
+            </div>
+            <div class="user-login">Winexcel</div>
+            <div #userDropDown class="user-menu dropdown animated faster d-none" [ngClass]="{
+              'd-none': userMenu.isFirstOpen,
+              dropdown__show: userMenu.display,
+              dropdown__close: !userMenu.display
+            }">
+              <div class="dropdown-header">Меню</div>
+              <div class="dropdown-item">Профиль</div>
+              <div class="dropdown-item">Настройки</div>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-item">Выход</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+
+  <div class="header bg-primary pb-6">
+  </div>
+
+
+  <div class="container-fluid mt--5">
+    <div class="row justify-content-center">
+      <div class=" col ">
+        <div class="card">
+          <!--Calendar-->
+          <section class="calendar">
+            <div class="container">
+              <div class="row">
+                <div class="col d-flex justify-content-center">
+                  <div class="calendar-selector">
+                    <app-selector></app-selector>
+                  </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                  <app-calendar></app-calendar>
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                  <app-tasks></app-tasks>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--Calendar-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="d-flex justify-content-center col-md-auto">
+        <div class="copyright">
+          CodoTodo &copy; {{ currentYear }}
+        </div>
+      </div>
+      <div class="col-md-auto ml-md-auto d-flex justify-content-center">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a href="">О нас</a>
+          </li>
+          <li class="menu-item">
+            <a href="">Свяжитесь с нами</a>
+          </li>
+          <li class="menu-item">
+            <a href="">Команда</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

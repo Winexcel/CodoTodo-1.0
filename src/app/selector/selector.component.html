@@ -1,0 +1,8 @@
+<div class="calendar-selector m-auto">
+  <i class="fa fa-arrow-left" (click)="changeMonth(-1)"></i>
+  <div class="calendar-date">
+    <i class="fa fa-calendar"></i>
+    <span class="selector-date">{{ dateService.date$ | async | moment }}</span>
+  </div>
+  <i class="fa fa-arrow-right" (click)="changeMonth(1)"></i>
+</div>

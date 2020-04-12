@@ -1,0 +1,36 @@
+table
+  width: 100%
+  font-size: 24px
+
+tr, td, th
+  padding: .5rem 1rem
+  transition: all .3s
+  background-color: #fff
+  box-shadow: rgba(0, 0, 0, .1) 0 0 0 1px, rgba(0, 0, 0, .1) 0 4px 16px
+td:hover
+  background-color: #e6eefc
+
+.day
+  position: relative
+
+  &__selected
+    background-color: #d0e3fc
+  &__disabled
+    opacity: .5
+    background-color: #f6f9fc
+
+  &-tasksCount
+    border-radius: 50%
+    background: #5e72e4
+    color: white
+    text-align: center
+    width: 25px
+    height: 25px
+    line-height: 25px
+    position: absolute
+    right: 0
+    top: 0
+    font-size: 13px
+    transform: translate(-10px, 10px)
+
+

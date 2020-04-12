@@ -1,0 +1,32 @@
+<div class="table-responsive">
+  <table>
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let week of weeks">
+        <td
+          class="day"
+          *ngFor="let day of week.days"
+          [ngClass]="{
+          day__selected: day.isSelected,
+          day__disabled: day.isDisabled
+          }"
+          (click)="changeDate(day.date)"
+        >
+          <div *ngIf="day.tasksCount" class="day-tasksCount">{{ day.tasksCount }}</div>
+          {{day.date.format('DD')}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

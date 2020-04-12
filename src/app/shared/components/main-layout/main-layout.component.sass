@@ -1,0 +1,164 @@
+.header-table
+  display: inline-block
+  vertical-align: middle
+
+.user
+  cursor: pointer
+  position: relative
+
+  &-avatar
+    display: inline-block
+    vertical-align: middle
+
+  &-login
+    display: inline-block
+    color: #fff
+    vertical-align: middle
+    margin-left: 10px
+
+  &-menu
+    position: absolute
+    margin-top: 15px
+    display: block
+    background: #fff
+    right: 0
+    z-index: 100
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50, 50, 93, .15), 0 5px 15px rgba(0, 0, 0, .1)
+
+.sidenav-toggler-line
+  background: #fff
+
+.codo
+  &-navbar
+    position: fixed
+    background: #fff
+    top: 0
+    bottom: 0
+    width: 250px
+    z-index: 100
+  &-sidenav
+    margin-left: 10px
+
+.navbar
+  &-heading
+    font-size: .75rem
+    padding-top: .25rem
+    padding-bottom: .25rem
+    letter-spacing: .04em
+    text-transform: uppercase
+    margin-left: 20px
+
+  &-content
+
+  &-menu
+    margin-top: 20px
+
+.dropdown
+  &-header
+    margin-top: 10px
+
+  &-item
+    min-width: 200px
+
+    &:last-of-type
+      margin-bottom: 15px
+
+  &__show
+    animation-name: slideInDown, fadeIn
+    animation-delay: 0s, 0s
+
+  &__close
+    animation-name: slideOutUp, fadeOut
+    animation-delay: 0s, 0s
+
+
+  &-login
+    display: inline-block
+    margin-left: 10px
+    color: #fff
+    vertical-align: middle
+
+
+.avatar
+  width: 45px
+  height: 45px
+  border-radius: 50%
+  overflow: hidden
+
+.logo
+  overflow: hidden
+  height: auto
+
+  &-img
+    width: 150px
+
+.nav-item
+  i
+    margin-right: 10px
+  &__bg
+    background: #f6f9fc
+  .nav-link
+    transition: 0.5s
+    padding: .675rem 0rem
+  padding-left: 20px
+  transition: all .3s
+
+.nav-item:hover
+  .nav-link
+    transform: translateX(20px)
+  background: #daeaff
+
+.sidenav-toggler-inner
+  cursor: pointer
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    width: 40px
+    height: 40px
+    background: #fff
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    opacity: .1
+    border-radius: 50%
+
+
+.calendar
+  &-selector
+    margin-bottom: 20px
+  margin: 60px 0
+
+.menu
+  &-list
+    padding: 0
+    margin: 0
+    list-style: none
+  &-item
+    display: inline-block
+    &:not(:last-child)
+      margin-right: 20px
+
+footer
+  padding: 40px 0
+
+@media (max-width: 576px)
+  .tools
+    & -buttons
+      text-align: left !important
+
+@media (max-width: 768px)
+  .menu-list
+    margin-top: 20px
+
+@media (min-width: 768px)
+  .nav-item
+    &__go-pro
+      position: absolute
+      bottom: 10px
+      width: 100%
+
+
+
+

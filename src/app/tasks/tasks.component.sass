@@ -1,0 +1,66 @@
+hr
+  margin: 0
+  margin-bottom: 15px
+
+.newTask
+  display: flex
+  justify-content: space-between
+  &-title
+    padding: .5rem
+    outline: none
+    focus: none
+    flex-grow: 1
+  &-addButton
+    padding: .5rem 1rem
+
+.form-control-label
+  padding: 0
+
+.btn
+  &-add
+    height: 100%
+  &-remove
+    background: #f5365c
+    border: none
+    &:active
+      border: none
+      background-color: #f5365c !important
+
+.calendar
+  &-tasks
+    padding: 2rem
+    border: 1px solid #ccc
+    margin-top: 2rem
+
+.task
+  &-checkbox
+    vertical-align: middle
+    margin-right: 10px
+  &-title
+    font-size: 20px
+  &-item
+    padding: .5rem
+    margin-top: 10px
+    background: #f6f9fc
+    border-radius: 5px
+    padding-left: 15px
+    padding-right: 15px
+  &-removeButton
+    float: right
+
+.tasks
+  &-list
+    list-style: none
+    padding: 0
+    
+.strike
+  text-decoration: line-through
+
+@media screen and (max-width: 576px)
+  .section-add
+    padding: 0
+    button
+      width: 100%
+      text-align: center
+      display: flex
+      justify-content: center
